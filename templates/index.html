@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='llama.png') }}" class="llama" id="llama" alt="Llama">
+    </div>
+
+    <script>
+        const socket = io();
+        const llama = document.getElementById('llama');
+
+        socket.on('speech_detected', (data) => {
+            llama.classList.add('glow');
+            setTimeout(() => {
+                llama.classList.remove('glow');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+
+

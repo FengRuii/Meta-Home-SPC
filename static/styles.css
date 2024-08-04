@@ -1,0 +1,16 @@
+.llama {
+    width: 1000px;  /* Maintain the larger width */
+    transition: box-shadow 0.5s;
+    margin-top: 190px;  /* Maintain margin to push the image down */
+    margin-left: 100px;  /* Add margin to push the image to the right */
+  }
+  
+  .llama.glow {
+    box-shadow: 0 0 50px 25px rgba(0, 255, 0, 0.7);  /* Enhanced glow effect */
+  }
+  
+  
+  
+  
+
+  
